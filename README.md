@@ -1,6 +1,10 @@
 # monitor_py
 
 Python script to monitor a list of IP addresses and notify a user through Telegram.
+<p align="center">
+  <img src="img/image.png" alt="monitor_py"/>
+</p>
+
 ## Overview
 
 This tool is designed to run as a cronjob to regularly check the status of a list of IP addresses and send a complete status update to your Telegram chat every time it runs.
