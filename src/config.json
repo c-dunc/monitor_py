@@ -1,0 +1,8 @@
+{
+    "alerts-enabled": true,
+    "check_interval": 60,
+    "telegram": {
+        "bot_token": "bot-token",
+        "chat_id": "chat-id"
+    }
+}
