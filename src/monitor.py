@@ -58,13 +58,12 @@ def main():
     ip_list = Config.load_ips()
 
     hosts, offline_hosts = check_hosts(ip_list)
-
-    if config.get("alerts-enabled"):
-        print("Sending Telegram status update")
-        telegram_send.send_status_update(config, hosts)
     
     if offline_hosts:
         print(f"\nSummary: {len(offline_hosts)} of {len(hosts)} hosts are offline")
+        if config.get("alerts-enabled"):
+            print("Sending Telegram status update")
+            telegram_send.send_status_update(config, hosts)
     else:
         print("\nSummary: All hosts are online")
 
